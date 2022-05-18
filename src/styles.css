@@ -1,1 +1,282 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('assets/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  body.using-mouse :focus {
+    outline: none !important;
+  }
+  
+  body :focus {
+    outline: 2px solid #0F56C9 !important;
+  }
+  
+  /*  
+  
+  @font-face {
+    font-family: 'Helvetica_Neue_Regular';
+    src: url(./assets/Helvetica\Neue\Regular.ttf), url(./assets/Helvetica\Neue\Regular.eot);
+  }*/
+  /*
+  @font-face {
+    font-family: 'Helvetica_Neue_Bold';
+    src: url(./assets/HelveticaNeue-Bold.eot), url(./assets/HelveticaNeue-Bold.ttf);
+  }
+  */
+  /*
+  @font-face {
+    font-family: 'Graphik-Regular';
+    src: url(./assets/Graphik-Regular.ttf), url(./assets/Graphik-Regular.eot);
+  }*/
+  
+  /*
+  @font-face {
+    font-family: 'Graphik-Semibold';
+    src: url(./assets/Graphik-Semibold.eot);
+    // src: url(./assets/Graphik-Semibold.eot?#iefix) format('embedded-opentype'), url(./assets/Graphik-Semibold.woff) format('woff'), url(./assets/Graphik-Semibold.ttf) format('truetype'); } */
+  
+  #chat-frame {
+    background-color: white;
+    width: 400px;
+    height: 560px;
+    /* height: calc(100vh - 44px); */
+    z-index: 10;
+  }
+  
+  #chat-window {
+    display: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #1E417C ;
+  }
+  
+ /* .toggle-icon {
+    background-image: url("./assets/toggle-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    margin: auto 0px auto 0px;
+  } */
+  
+  .toggle-icon-open {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+  }
+  
+  .close-text {
+    font-size: 12px;
+    font-weight: 300;
+    margin: auto 0px auto 0px;
+  }
+  
+  .btn_iconClose {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: -37px;
+    margin-top: 8px;
+    /* width: 30px; */
+    float: right;
+  }
+  
+  .header-text {
+    font-size: 16px;
+    font-family: Verdana;
+    margin: 10px 0px 0px 0px;
+    padding-left: 55px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .item-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #093552;
+  }
+  /*
+  .link-icon {
+    background-image: url("./assets/link-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24px;
+    width: 30px;
+    margin: 0px auto 8px auto;
+  }*/
+  
+  #main-container {
+    max-height: 100%;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0px;
+    right: 20px;
+    width: 360px;
+    background: linear-gradient(90deg, #252525 0%, #313131 100%);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 14px 14px 14px 14px;
+    line-height: 1;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    margin-right: 1rem;
+    box-shadow: 00px 0px 10px 3px rgb(0 0 0 / 50%)
+  }
+  
+  .badge {
+    position: fixed;
+    overflow: hidden;
+    bottom: 47px;
+    right: 57px;
+    /* padding: 5px 10px; */
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(230, 47, 47);
+    /* border-radius: 14px 14px 14px 14px; */
+    transition: all .3s ease-out;
+    z-index: 9;
+    /* border: 1px solid white; */
+    height: 20px;
+    /* width: 9px; */
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  
+  .headerDown {
+    width: 310px;
+    height: 54px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Graphik-Semibold';
+    padding-top: 5px;
+  }
+  
+  .logo_img {
+    height: 33px;
+    width: 34px;
+    float: left;
+    margin-top: 2px;
+    border-radius: 17px;
+    margin-left: 13px;
+  }
+  
+  .logo_img_down {
+    height: 36px;
+    width: 37px;
+    float: left;
+    margin-top: 7px;
+    border-radius: 17px;
+    margin-left: 13px;
+  }
+  
+  .headerUp {
+    width: 100%;
+    height: 41px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Graphik-Semibold';
+    font-size: 22px;
+    padding-top: 5px;
+  }
+  
+  span.sub_head {
+    font-size: 10px;
+    font-family: Verdana;
+    margin: 2px 0px 0px 55px;
+    color: #ffffff;
+    display: block;
+  }
+  
+  .icon_up {
+    width: 20px;
+    margin-left: -30px;
+    cursor: pointer;
+  }
+  
+  @-moz-document url-prefix() {
+    .icon_up {
+        width: 20px;
+        margin-left: -25px;
+    }
+    .btn_iconClose {
+        margin-right: -35px;
+    }
+  }
+  
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .btn_iconClose {
+        margin-right: -35px;
+        /* width: 100px; */
+    }
+    .icon_up {
+        width: 24px;
+        margin-left: 0px;
+    }
+  }
+  
+  .close_icon {
+    float: right;
+    width: 30px;
+    margin-right: 15px;
+    background: transparent;
+    border: none;
+  }
+  
+  .icon_close {
+    margin-top: 5px;
+    position: relative;
+    right: 0px;
+    cursor: pointer;
+  }
+  
+  .redHeader {
+    height: 6px;
+    background-color: #BB0000;
+  }
+  
+  /* @media only screen and (min-width: 860px) {
+  #chat-frame {
+    height: 450px !important;
+  } */
+  
+  /* Responsive chat for 200% and small screens */
+  
+  @media only screen and (max-width: 959px) {
+    #main-container.open {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    #main-container #chat-wrapper, #main-container #chat-wrapper #chat-window, #main-container #chat-wrapper #chat-window #chat-frame {
+        width: 100%;
+        height: 100%;
+    }
+    /* .responsiveMac {
+        height: calc(100vh - 44px) !important;
+    } */
+  }
+  
+  /* #ftwrap {
+    margin-bottom: 100px;
+  } */
+  
